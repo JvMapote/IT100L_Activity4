@@ -1,0 +1,76 @@
+#Yourname
+def Code1():
+    print("Input Full Name")
+    Name = input()
+    print("Input Birth Year")
+    BirthYear = input()
+    Year = (int(BirthYear) + 100)
+    Someyear = (Year - 2021)
+    Age = (2021 - int(BirthYear))
+    print("Hello " + Name + " You are currently " + str(Age) + " Years old")
+    print("You were born on " + BirthYear)
+    print("Your will have to wait " + str(Someyear) + " Years " + "to be 100 years old")
+    print("\n\n\n")
+
+def Code2():
+    Name = input("Enter full name: ")
+    Birthyear = input("Enter your birth year: ")
+    Birthyear = int(Birthyear)
+    Year = (Birthyear +18)
+    if Year > 2022:
+        print("Hi " + Name + ". " + "You can't vote yet for the both election. Register on " + str(Year) + ".")
+        print("\n\n\n")
+    else:
+        if Year <= 2016:
+            print("Hi " + Name + ". " + "You can vote for the 2016 Presidential Election")
+            print("\n\n\n")
+        else:
+            print("Hi " + Name + ". " + "You can vote for the 2022 Presidential Election")
+            print("\n\n\n")
+def Code3():
+    name = str(input("Enter Name: "))
+    Prelim = int(input("Enter the Prelim grade: "))
+    Midterm = int(input("Enter the Midterm grade: "))
+    Finals = int(input("Enter the Final grade: "))
+    Quiz1 = int(input("Enter the Quiz1 grade: "))
+    Quiz2 = int(input("Enter the Quiz2 grade: "))
+    Quiz3 = int(input("Enter the Quiz3 grade: "))
+    ass1 = int(input("Enter the assignment 1 grade: "))
+    ass2 = int(input("Enter the assignment 2 grade: "))
+    exam1 = (Prelim/100)*20
+    exam2 = (Midterm/100)*20
+    exam3 = (Finals/100)*20
+    quiz1 = (Quiz1/50)*10
+    quiz2 = (Quiz2/50)*10
+    quiz3 = (Quiz3/50)*10
+    assignment1 = (ass1/25)*5
+    assignment2 = (ass2/25)*5
+    Finalgrade = (exam1+exam2+exam3+quiz1+quiz2+quiz3+assignment1+assignment2)
+    if Finalgrade >= 60:
+        print("Hi " + name)
+        print("Your final grade: " + str(Finalgrade))
+        print("You Passed")
+        print("\n\n\n")
+    else:
+        print("Hi " + name)
+        print("Your final grade: " + str(Finalgrade))
+        print("You failed")
+        print("\n\n\n")
+while True:
+    print(" \n\n**Select Function**")
+    print(" [1] Activity 1 - 4")
+    print(" [2] Activity 2 – 1")
+    print(" [3] Activity 2 - 3")
+    print(" [4] End")
+    choice = int(input("\nSelection: "))
+    print()
+    if choice == 1:
+        Code1()
+    elif choice == 2:
+        Code2()
+    elif choice == 3:
+        Code3()
+    elif choice == 4:
+        print("END")
+        exit()
+
